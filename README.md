@@ -1,3 +1,3 @@
 # jacksdamnserver.site
 
-Website made for when you are bored in class
+A Website with unblocked games and bypass and much more!
