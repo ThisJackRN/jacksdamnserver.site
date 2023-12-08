@@ -1,49 +1,105 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+  <meta charset=utf-8>
+  <title>Tetr.js</title>
+  <link rel=stylesheet href=style.css>
+<!--<canvas id=bg></canvas>-->
+<video id=bg src=bg.webm loop autoplay></video>
+<div id=content>
 
-<head>
-  <meta charset="utf-8">
-  <title>Tetris!</title>
-  <script src="js/app.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
-</head>
+  <!-- Canvases -->
+  <div id=d>
+    <h3>Hold</h3>
 
-<body>
-  <div class="menu-wrap">
-    <input type="checkbox" class="toggler">
-    <div class="hamburger">
-      <div></div>
+    <div id=a>
+      <canvas id=hold></canvas>
     </div>
-    <div class="menu">
-      <div class="menu-content">
-        <h2 class="t-ucase">rules</h2>
-        <p class="rules"> Please use the <b class="key">UP</b> key to rotate your tetromino, and <b class="key">LEFT</b>
-          and <b class="key">RIGHT</b> to <br> move across the board. Pressing <b class="key">DOWN</b> will speed up the
-          tetromino.</p>
-        <button class="close fw-400">X</button>
-      </div>
-    </div>
+    <ul id=replay style=display:none>
+      <li><a onclick=replay(-1)>prev</a>
+      <li><a onclick=replay()>Play/Pause</a>
+      <li><a onclick=replay(1)>next</a>
+    </ul>
+
+    <table id=stats>
+      <tr><td id=line>0<th>Line
+      <tr><td id=piece>0<th>Piece
+      <tr><th id=time>00:00.00
+    </table>
   </div>
-  <header>
-    <h1 class="fw-300 t-ucase">Welcome <br><span class="fw-400 t-wide t-big t-ucase">to tetris</span></h1>
-  </header>
-  <main class="game-area">
-    <div class="game">
-      <div class="grid"></div>
-    </div>
-    <section>
-      <div class="display">
-        <h1 class="score fw-400 t-ucase">Your Score <br> <span class="score-display t-ucase fw-300">0</span></h1>
-        <div class="previous-shape">
-          <div class="previous-grid"></div>
-        </div>
-        <h2 class="lines-display fw-400 t-ucase">Lines:<span class="lines-score">0</span></h2>
-      </div>
-      <button class="button t-ucase" href="#">Start / Pause</button>
-      <small class='footer t-ucase'>made with love 2019</small>
-    </section>
-  </main>
-</body>
 
-</html>
+  <div id=b>
+    <canvas id=bgStack></canvas>
+    <canvas id=stack></canvas>
+    <canvas id=active></canvas>
+
+    <p id=msg>
+
+    <nav class='menu on'>
+      <h1>Tetr.js</h1>
+      <ul>
+        <li><a onclick=init(0)>Play Sprint</a>
+        <!--<li><a onclick=init(1)>Play Marathon</a>
+        <li><a onclick=init(2)>Play Ultra</a>-->
+        <li><a onclick=init(3)>Play Dig Race</a>
+        <li><a onclick=menu(2)><i class=></i>Controls</a>
+        <li><a onclick=menu(1)><i class=icon-cog></i>Settings</a>
+      </ul>
+    </nav>
+
+    <div class=menu>
+      <h2>Settings</h2>
+      <div id=settings>
+      </div>
+      <div style=clear:both><a class=button onclick=menu(0)>Done</a></div>
+    </div>
+
+    <div class=menu>
+      <h2>Controls</h2>
+      <p>Click on the control you want to change, then press any key.
+      <table id=controls>
+        <tr> <th>Move Left:    <td id=moveLeft>←
+        <tr> <th>Move Right:   <td id=moveRight>→
+        <tr> <th>Move Down:    <td id=moveDown>↓
+        <tr> <th>Hard Drop:    <td id=hardDrop>Space
+        <tr> <th>Hold:         <td id=holdPiece>C
+        <tr> <th>Spin Right:   <td id=rotRight>X
+        <tr> <th>Spin Left:    <td id=rotLeft>Z
+        <tr> <th>Spin 180:     <td id=rot180>Shift
+        <tr> <th>Retry:        <td id=retry>R
+        <tr> <th>Pause:        <td id=pause>Esc
+      </table>
+      <div style=clear:both><a class=button onclick=menu(0)>Done</a></div>
+    </div>
+
+    <nav id=go class=menu>
+      <ul>
+        <li><a onclick=init(gametype)>Retry</a>
+        <li><a onclick=init('replay')>Watch Replay</a>
+        <li><a onclick=menu(0)>Main Menu</a>
+      </ul>
+    </nav>
+
+    <nav id=pause class=menu>
+      <ul>
+        <li><a onclick=unpause()>Return</a>
+        <li><a onclick=init(gametype)>Retry</a>
+        <li><a onclick=menu(0)>Main Menu</a>
+      </ul>
+    </nav>
+  </div>
+
+  <div id=c>
+    <h3>Next</h3>
+    <canvas id=preview></canvas>
+  </div>
+
+</div>
+
+<canvas id=sprite></canvas>
+<script src=tetris.js></script>
+<script src=piece.js></script>
+<script src=stack.js></script>
+<script src=hold.js></script>
+<script src=preview.js></script>
+<script src=menu.js></script>
+<script src=bg.js></script>
+<script>_gaq=[['_setAccount','UA-30472693-1'],['_trackPageview']];(function(d){var g=d.createElement('script'),s=d.scripts[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)})(document)</script>
