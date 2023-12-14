@@ -1,0 +1,11 @@
+<script src="../Run 3/ruffle.js"></script>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        player.load("runIII.swf");
+    });
+</script>

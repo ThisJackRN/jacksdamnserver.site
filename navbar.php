@@ -23,6 +23,9 @@ if(!defined('Navbar')) {
         <a class="nav-link" href="games.php">Games</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="flash.php">Flash</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="bypass.php">Bypass</a>
       </li>
       <li class="nav-item">
