@@ -1,6 +1,6 @@
 <?php
  
-    define('MyConst', TRUE);
+    define('Navbar', TRUE);
     include('navbar.php'); 
     
 ?>

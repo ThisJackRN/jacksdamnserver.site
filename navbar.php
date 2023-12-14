@@ -1,5 +1,5 @@
 <?php
-if(!defined('MyConst')) {
+if(!defined('Navbar')) {
    die('Why are you trying to see the navbar? <b>Dont do that again...</b>');
 }
 ?>
@@ -27,6 +27,9 @@ if(!defined('MyConst')) {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="WebRetro/index.html">Emulator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://forms.gle/56BgGzpT4jPt7QJa8">Game Submission</a>
       </li>
     </ul>
   </div>
