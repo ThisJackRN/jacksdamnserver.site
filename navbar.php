@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 if(!defined('Navbar')) {
    die('Why are you trying to see the navbar? <b>Dont do that again...</b>');
@@ -21,9 +22,6 @@ if(!defined('Navbar')) {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="games.php">Games</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="flash.php">Flash</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="bypass.php">Bypass</a>
