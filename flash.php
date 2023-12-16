@@ -13,11 +13,16 @@ include('navbar.php');
 <body>
 
 <?php
-$folderPath = '/flash/games';
-$folders = array_filter(glob('/flash/games/*'), function ($dir) {
-    return is_dir($dir) && count(glob($dir . '/*.swf')) > 0;
-});
+$folderPath = './flash/games';
 
+// Get all files and directories in the /flash/games folder
+$items = array_diff(scandir($folderPath), ['.', '..']);
+
+// Filter out only directories with .swf files
+$folders = array_filter($items, function ($item) use ($folderPath) {
+    $itemPath = $folderPath . '/' . $item;
+    return is_dir($itemPath) && count(glob($itemPath . '/*.swf')) > 0;
+});
 
 // Create a custom sorting function
 function compareFolders($folder1, $folder2)
@@ -39,7 +44,7 @@ if (!empty($folders)) {
         $folderName = basename($folder);
 
         // Read the game name from the "game_name.txt" file
-        $gameNameFile = $folder . '/game_name.txt';
+        $gameNameFile = $folderPath . '/' . $folderName . '/game_name.txt';
         if (file_exists($gameNameFile)) {
             $gameName = trim(file_get_contents($gameNameFile));
         } else {
@@ -47,19 +52,18 @@ if (!empty($folders)) {
         }
 
         // Get the full SWF file name
-        $swfFiles = glob($folder . '/*.swf');
+        $swfFiles = glob($folderPath . '/' . $folderName . '/*.swf');
         $swfFileName = !empty($swfFiles) ? basename($swfFiles[0]) : '';
 
         // Display the link to the folder's webpage with the /flash/games/ prefix, an icon, and the game name
         echo '<div class="game-item">';
         echo '<a href="javascript:void(0);" onclick="loadGame(\'' . $folderName . '\', \'' . $gameName . '\', \'' . $swfFileName . '\')">';
         echo '<div class="game-icon-wrapper">';
-        echo '<img src="' . getIconSrc($folder) . '" alt="' . $gameName . '">';
+        echo '<img src="' . getIconSrc($folderPath . '/' . $folderName) . '" alt="' . $gameName . '">';
         echo '</div>';
         echo '<div class="game-name">' . $gameName . '</div>';
         echo '</a>';
         echo '</div>';
-
     }
     echo '</div>';
 } else {
@@ -81,7 +85,6 @@ function getIconSrc($folder) {
         window.location.href = `./flash/index.php?folder=${encodeURIComponent(folderName)}&game=${encodeURIComponent(swfFileName)}`;
     }
 </script>
-
 
 </body>
 </html>
