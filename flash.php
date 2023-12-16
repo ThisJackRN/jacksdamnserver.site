@@ -61,13 +61,13 @@ if (!empty($folders)) {
         echo '<div class="game-name">' . $gameName . '</div>';
         echo '</a>';
         echo '</div>';
-        echo 'FolderPath: ' . $folderPath . '<br>';
-        print_r($folders);
 
     }
     echo '</div>';
 } else {
     echo '<p>No folders found in the /flash/games directory.</p>';
+    echo 'FolderPath: ' . $folderPath . '<br>';
+    print_r($folders);
 }
 
 // Function to get the first icon file or use a default if none found
