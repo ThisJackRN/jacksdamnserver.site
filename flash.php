@@ -13,8 +13,8 @@ include('navbar.php');
 <body>
 
 <?php
-$folderPath = '/flash/Games';
-$folders = array_filter(glob('/flash/Games/*'), function ($dir) {
+$folderPath = '/flash/games';
+$folders = array_filter(glob('/flash/games/*'), function ($dir) {
     return is_dir($dir) && count(glob($dir . '/*.swf')) > 0;
 });
 
