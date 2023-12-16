@@ -18,8 +18,13 @@ $folderPath = '/flash/Games';
 
 // Get all subdirectories in the /flash/games folder with .swf files
 $folders = array_filter(glob($folderPath . '/*'), function ($dir) {
-    return is_dir($dir) && count(glob($dir . '/*.swf')) > 0;
+    $result = is_dir($dir) && count(glob($dir . '/*.swf')) > 0;
+    if (!$result) {
+        echo 'Error reading directory: ' . $dir . '<br>';
+    }
+    return $result;
 });
+
 
 // Create a custom sorting function
 function compareFolders($folder1, $folder2)
