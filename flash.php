@@ -13,16 +13,9 @@ include('navbar.php');
 <body>
 
 <?php
-// Specify the path to the /flash/games folder
-$folderPath = '/flash/games';
-
-// Get all subdirectories in the /flash/games folder with .swf files
-$folders = array_filter(glob($folderPath . '/*'), function ($dir) {
-    $result = is_dir($dir) && count(glob($dir . '/*.swf')) > 0;
-    if (!$result) {
-        echo 'Error reading directory: ' . $dir . '<br>';
-    }
-    return $result;
+$folderPath = '/flash/Games';
+$folders = array_filter(glob('/flash/Games/*'), function ($dir) {
+    return is_dir($dir) && count(glob($dir . '/*.swf')) > 0;
 });
 
 
