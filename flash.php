@@ -1,65 +1,97 @@
 <!DOCTYPE html>
 <?php
+
 define('Navbar', TRUE);
 include('navbar.php');
+
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="games.css">
-  <title>The Games Folder</title>
+  <title>The Flash Games Folder</title>
 </head>
+
 <body>
 
-<?php
-// Function to get folders and display game links
-function displayGameLinks($folderPath) {
-  $folders = array_filter(glob($folderPath . '/*'), 'is_dir');
+  <?php
+  // Function to get the list of Flash games and icons
+  function getFlashGamesAndIcons($folderPath)
+  {
+    $flashGames = array();
 
-  // Use a unique function name based on the folder path
-  $compareFunction = function ($folder1, $folder2) {
-    $folder1Name = strtolower(trim($folder1));
-    $folder2Name = strtolower(trim($folder2));
+    // Get all subdirectories
+    $folders = array_filter(glob($folderPath . '/*'), 'is_dir');
 
-    return strcmp($folder1Name, $folder2Name);
-  };
+    // Create a custom sorting function
+    function compareFolders($folder1, $folder2)
+    {
+      $folder1Name = strtolower(trim($folder1));
+      $folder2Name = strtolower(trim($folder2));
+      return strcmp($folder1Name, $folder2Name);
+    }
 
-  usort($folders, $compareFunction);
+    // Sort the folders using the custom sorting function
+    usort($folders, 'compareFolders');
 
-  if (!empty($folders)) {
-    echo '<div class="game-grid">';
+    // Iterate through each folder
     foreach ($folders as $folder) {
       $folderName = basename($folder);
-      $gameNameFile = $folder . '/game_name.txt';
+      $flashGame = array();
 
-      if (file_exists($gameNameFile)) {
-        $gameName = trim(file_get_contents($gameNameFile));
+      // Read the game name from the "game_name.txt" file
+      $flashGameNameFile = $folder . '/game_name.txt';
+      if (file_exists($flashGameNameFile)) {
+        $flashGame['name'] = trim(file_get_contents($flashGameNameFile));
       } else {
-        $gameName = $folderName;
+        $flashGame['name'] = $folderName;
       }
 
+      // Search for favicon and icon files in the folder
       $iconFiles = glob($folder . '/*.{ico,png,svg,gif}', GLOB_BRACE);
-      $iconSrc = !empty($iconFiles) ? $iconFiles[0] : 'default.png';
 
-      echo '<div class="game-item">';
-      echo '<a href="./flash/' . $folderName . '">';
-      echo '<div class="game-icon-wrapper">';
-      echo '<img src="' . $iconSrc . '" alt="' . $gameName . '">';
-      echo '</div>';
-      echo '<div class="game-name">' . $gameName . '</div>';
-      echo '</a>';
-      echo '</div>';
+      // Get the first icon file or use a default if none found
+      $flashGame['iconSrc'] = !empty($iconFiles) ? $iconFiles[0] : 'default.png';
+
+      // Add the Flash game to the list
+      $flashGames[] = $flashGame;
     }
-    echo '</div>';
-  } else {
-    echo '<p>No folders found in the ' . $folderPath . ' directory.</p>';
-  }
-}
 
-// Display links for the 'flash' folder
-displayGameLinks('flash');
-?>
+    return $flashGames;
+  }
+
+  // Display Flash games
+  // Display Flash games
+  $flashGames = getFlashGamesAndIcons('flash/games');
+  displayFlashGames($flashGames, 'flash/games/flashplayer.php?game=', 'flash-game-item');
+
+
+  function displayFlashGames($flashGames, $linkPrefix, $itemClass = 'flash-game-item')
+  {
+    if (!empty($flashGames)) {
+      echo "<div class='{$itemClass}-grid'>";
+      foreach ($flashGames as $flashGame) {
+        echo "<div class='{$itemClass}'>";
+        echo "<a href='{$linkPrefix}{$flashGame['name']}'>";
+        echo "<div class='{$itemClass}-icon-wrapper'>";
+        echo "<img src='{$flashGame['iconSrc']}' alt='{$flashGame['name']}'>";
+        echo "</div>";
+        echo "<div class='{$itemClass}-name'>{$flashGame['name']}</div>";
+        echo "</a>";
+        echo "</div>";
+      }
+      echo "</div>";
+    } else {
+      echo '<p>No folders found.</p>';
+    }
+  }
+  ?>
 
 </body>
+
 </html>
