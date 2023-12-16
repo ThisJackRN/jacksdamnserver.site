@@ -7,91 +7,56 @@ include('navbar.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="games.css">
-  <title>The Flash Games Folder</title>
+  <title>The Games Folder</title>
 </head>
-
 <body>
 
-  <?php
-  // Function to get the list of Flash games and icons
-  function getFlashGamesAndIcons($folderPath)
-  {
-    $flashGames = array();
+<?php
+// Specify the path to the /flash folder
+$folderPath = 'flash';
 
-    // Get all subdirectories
-    $folders = array_filter(glob($folderPath . '/*'), 'is_dir');
+// Get all HTML and PHP files in the /flash folder
+$files = array_filter(glob($folderPath . '/*.{html,php}', GLOB_BRACE), 'is_file');
 
-    // Create a custom sorting function
-    function compareFolders($folder1, $folder2)
-    {
-      $folder1Name = strtolower(trim($folder1));
-      $folder2Name = strtolower(trim($folder2));
-      return strcmp($folder1Name, $folder2Name);
-    }
+// Create a custom sorting function
+function compareFiles($file1, $file2) {
+  $file1Name = strtolower(trim($file1));
+  $file2Name = strtolower(trim($file2));
 
-    // Sort the folders using the custom sorting function
-    usort($folders, 'compareFolders');
+  return strcmp($file1Name, $file2Name);
+}
 
-    // Iterate through each folder
-    foreach ($folders as $folder) {
-      $folderName = basename($folder);
-      $flashGame = array();
+// Sort the files using the custom sorting function
+usort($files, 'compareFiles');
 
-      // Read the game name from the "game_name.txt" file
-      $flashGameNameFile = $folder . '/game_name.txt';
-      if (file_exists($flashGameNameFile)) {
-        $flashGame['name'] = trim(file_get_contents($flashGameNameFile));
-      } else {
-        $flashGame['name'] = $folderName;
-      }
+// Display each file as a link with an icon and file name
+if (!empty($files)) {
+  echo '<div class="game-grid">';
+  foreach ($files as $file) {
+    // Get the file name
+    $fileName = basename($file);
 
-      // Search for favicon and icon files in the folder
-      $iconFiles = glob($folder . '/*.{ico,png,svg,gif}', GLOB_BRACE);
+    // Use a default icon for files
+    $iconSrc = 'default.png';
 
-      // Get the first icon file or use a default if none found
-      $flashGame['iconSrc'] = !empty($iconFiles) ? $iconFiles[0] : 'default.png';
-
-      // Add the Flash game to the list
-      $flashGames[] = $flashGame;
-    }
-
-    return $flashGames;
+    // Display the link to the file's webpage with the /flash/ prefix, an icon, and the file name
+    echo '<div class="game-item">';
+    echo '<a href="./flash/' . $fileName . '">';
+    echo '<div class="game-icon-wrapper">';
+    echo '<img src="' . $iconSrc . '" alt="' . $fileName . '">';
+    echo '</div>';
+    echo '<div class="game-name">' . $fileName . '</div>';
+    echo '</a>';
+    echo '</div>';
   }
-
-  // Display Flash games
-  // Display Flash games
-  $flashGames = getFlashGamesAndIcons('flash/games');
-  displayFlashGames($flashGames, 'flash/games/flashplayer.php?game=', 'flash-game-item');
-
-
-  function displayFlashGames($flashGames, $linkPrefix, $itemClass = 'flash-game-item')
-  {
-    if (!empty($flashGames)) {
-      echo "<div class='{$itemClass}-grid'>";
-      foreach ($flashGames as $flashGame) {
-        echo "<div class='{$itemClass}'>";
-        echo "<a href='{$linkPrefix}{$flashGame['name']}'>";
-        echo "<div class='{$itemClass}-icon-wrapper'>";
-        echo "<img src='{$flashGame['iconSrc']}' alt='{$flashGame['name']}'>";
-        echo "</div>";
-        echo "<div class='{$itemClass}-name'>{$flashGame['name']}</div>";
-        echo "</a>";
-        echo "</div>";
-      }
-      echo "</div>";
-    } else {
-      echo '<p>No folders found.</p>';
-    }
-  }
-  ?>
+  echo '</div>';
+} else {
+  echo '<p>No HTML or PHP files found in the /flash directory.</p>';
+}
+?>
 
 </body>
-
 </html>
