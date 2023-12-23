@@ -1,13 +1,9 @@
-<!DOCTYPE html>
 <?php
  
     define('Navbar', TRUE);
     include('navbar.php'); 
     
 ?>
-<head>
-    <title>Home Page</title>
-</head>
 <body>
     <H1>WELCOME TO JACKSDAMNSERVER.SITE</H1>
     <H2>FILLED WITH UNBLOCKED GAMES AND MORE</H2>

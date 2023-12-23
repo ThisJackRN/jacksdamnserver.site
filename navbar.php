@@ -1,4 +1,29 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="
+Dive into an expansive world of online gaming at Jack's Damn Games, your premier destination for an extensive array of free Flash and HTML5 games. Experience the perfect blend of nostalgia and innovation as you explore our diverse collection, featuring classic Flash games that transport you to the golden age of online gaming and cutting-edge HTML5 titles offering a seamless, modern gameplay experience.
+
+At Jack's Damn Games, we take pride in curating a broad selection that caters to a variety of gaming preferences. Whether you're drawn to the simplicity and charm of retro Flash games or seeking the latest advancements in HTML5 technology, our platform is your one-stop-shop for gaming variety. Immerse yourself in a world of entertainment with genres spanning action, adventure, strategy, and puzzles, ensuring there's something for every gaming enthusiast.
+
+What sets us apart is our commitment to a user-friendly experience. Navigate effortlessly through our platform, where there are no subscriptions or hidden fees – all our games are accessible for free, ensuring inclusive and high-quality gaming for everyone.
+
+Stay engaged with regular updates as we continuously expand our library, introducing new and captivating games to keep you entertained. Relive the excitement of Flash gaming or embrace the future with HTML5 – Jack's Damn Games is your ultimate destination for a gaming experience that transcends boundaries. Join our dynamic gaming community and embark on a journey filled with challenge, excitement, and endless enjoyment. Welcome to the unparalleled realm of free Flash and HTML5 games at Jack's Damn Games!
+Dive into an expansive world of online gaming at Jack's Damn Games, your premier destination for an extensive array of free Flash and HTML5 games. Experience the perfect blend of nostalgia and innovation as you explore our diverse collection, featuring classic Flash games that transport you to the golden age of online gaming and cutting-edge HTML5 titles offering a seamless, modern gameplay experience.
+
+At Jack's Damn Games, we take pride in curating a broad selection that caters to a variety of gaming preferences. Whether you're drawn to the simplicity and charm of retro Flash games or seeking the latest advancements in HTML5 technology, our platform is your one-stop-shop for gaming variety. Immerse yourself in a world of entertainment with genres spanning action, adventure, strategy, and puzzles, ensuring there's something for every gaming enthusiast.
+
+What sets us apart is our commitment to a user-friendly experience. Navigate effortlessly through our platform, where there are no subscriptions or hidden fees – all our games are accessible for free, ensuring inclusive and high-quality gaming for everyone.
+
+Stay engaged with regular updates as we continuously expand our library, introducing new and captivating games to keep you entertained. Relive the excitement of Flash gaming or embrace the future with HTML5 – Jack's Damn Games is your ultimate destination for a gaming experience that transcends boundaries. Join our dynamic gaming community and embark on a journey filled with challenge, excitement, and endless enjoyment. Welcome to the unparalleled realm of free Flash and HTML5 games at Jack's Damn Games!">
+    
+    <!-- Dynamically generated keywords -->
+    <?php include('generate_meta_tags.php'); ?>
+    
+    <title><?php echo $pageTitle; ?></title>
+</head>
 <?php
 if (!defined('Navbar')) {
    die('Why are you trying to see the navbar? <b>Dont do that again...</b>');
