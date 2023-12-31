@@ -1,3 +1,49 @@
+<?php
+
+function incrementVisitorCount() {
+    $countFile = 'visitor_count.json';
+    $cookieName = 'visitor_count_cookie';
+
+    try {
+        // Read the current count from the file or create it if it doesn't exist
+        if (file_exists($countFile)) {
+            $countData = json_decode(file_get_contents($countFile), true);
+        } else {
+            $countData = ['count' => 0, 'highest' => 0];
+        }
+
+        // Check if the user already has a cookie
+        if (!isset($_COOKIE[$cookieName])) {
+            // Increment the count
+            $countData['count']++;
+
+            // Save the updated count back to the file only if it's higher
+            if (!isset($countData['highest']) || $countData['count'] > $countData['highest']) {
+                $countData['highest'] = $countData['count'];
+            }
+
+            // Save the updated count back to the file
+            file_put_contents($countFile, json_encode($countData));
+
+            // Set a cookie to prevent counting again for the same user
+            setcookie($cookieName, 'visited', time() + 3600 * 24); // Cookie valid for 24 hours
+        }
+        
+        // Return the current count
+        return $countData['count'];
+    } catch (Exception $e) {
+        // Handle exceptions (e.g., file not found, permission issues)
+        error_log('Error: ' . $e->getMessage());
+        return 0; // Return a default value or handle the error as needed
+    }
+}
+
+// Increment the visitor count and get the updated count
+$visitorCount = incrementVisitorCount();
+
+// Now, you can use $visitorCount in your HTML or wherever you want to display the count
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
