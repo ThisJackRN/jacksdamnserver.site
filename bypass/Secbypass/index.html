@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <style>
+      iframe {
+        width:90%;
+        height: 90%;
+      }
+    </style>
+    <script>
+      window.onload=()=>{
+        setInterval(()=>{document.body.innerHTML+='<iframe src="'+window.location.toString()+'"></iframe>';},3000);
+      }
+      /*window.onload=()=>{
+        var f = document.createElement('iframe');
+        f.src = window.location;
+        f.style.width='90%';
+        f.style.height='90%';
+        document.body.appendChild(f);
+      }
+      function f(x) {
+        if (x.parent) {
+          window.document.body.innerHTML = f(x.parent);
+        }
+      }
+      window.document.body.innerHTML = f(window);*/
+    </script>
+  </body>
+</html>
