@@ -38,8 +38,8 @@ if (count($files) > 0) {
         echo '<h3><a href="' . $folderLink . '/">' . basename($folder) . '</a></h3>';
         echo '<ul>';
         foreach ($files as $file) {
-            // Skip index.html in the list
-            if ($file != 'index.html') {
+            // Skip index.php and index.html in the list
+            if ($file != 'index.php' && $file != 'index.html') {
                 echo '<li><a href="' . $folderLink . '/' . $file . '">' . $file . '</a></li>';
             }
         }
