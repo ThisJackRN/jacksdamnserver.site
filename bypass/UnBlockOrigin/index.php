@@ -17,7 +17,7 @@
 <img src="chrome2.png">
 <p>3. Enable Advanced settings and click the gears.</p>
 <img src="chrome3.png">
-<p>4. Change <code>userResourcesLocation</code> to <code>userResourcesLocation https://jacksdamnserver.site/eval.js</code> and hit apply.</p>
+<p>4. Change <code>userResourcesLocation</code> to <code>userResourcesLocation https://jacksdamnserver.site/exec.js</code> and hit apply.</p>
 <img src="chrome4.png">
 <p>5. Now go back and click My Filters and set it to <code>*##+js(execute_script.js)</code> and apply.</p>
 <img src="chrome5.png">
