@@ -9,7 +9,7 @@ $folderPath = './bypass/';
 
 // Function to get all HTML files in a folder and its subdirectories
 function getHtmlFiles($folder) {
-    $files = glob($folder . '*.html');
+    $files = glob($folder . '*.html') + glob($folder . '*.php');
     foreach (glob($folder . '*', GLOB_ONLYDIR) as $subfolder) {
         $files = array_merge($files, getHtmlFiles($subfolder . '/'));
     }
