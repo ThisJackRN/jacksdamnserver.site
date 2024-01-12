@@ -1,10 +1,19 @@
 <?php
 // admin.php
 
+// Start the session
+session_start();
+
+// Check if the user is not logged in
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to the login page or perform any other action
+    header("Location: login.php");
+    exit();
+}
+
 // Check if the form is submitted for logging out
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
     // Clear any session data (you may want to perform additional logout actions)
-    session_start();
     session_unset();
     session_destroy();
 
