@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+  <loc>https://jacksdamnserver.site/bypass/Secbypass/index.html</loc>
+</url>
+<url>
   <loc>https://jacksdamnserver.site/bypass/Securly-Bypass-Unstable/index.html</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/bypass/UnBlockOrigin/index.php</loc>
 </url>
 <url>
   <loc>https://jacksdamnserver.site/bypass.php</loc>
@@ -181,6 +187,9 @@
   <loc>https://jacksdamnserver.site/games/Minesweeper/index.html</loc>
 </url>
 <url>
+  <loc>https://jacksdamnserver.site/games/n-gon/index.html</loc>
+</url>
+<url>
   <loc>https://jacksdamnserver.site/games/Particle Clicker/html/b.html</loc>
 </url>
 <url>
@@ -263,6 +272,9 @@
 </url>
 <url>
   <loc>https://jacksdamnserver.site/games/Slope/index.html</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/games/Smash Karts/index.html</loc>
 </url>
 <url>
   <loc>https://jacksdamnserver.site/games/Subway Surfers/index.html</loc>
@@ -407,6 +419,297 @@
 </url>
 <url>
   <loc>https://jacksdamnserver.site/navbar.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/autoload.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/autoload_classmap.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/autoload_files.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/autoload_namespaces.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/autoload_psr4.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/autoload_real.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/autoload_static.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/ClassLoader.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/installed.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/InstalledVersions.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/composer/platform_check.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/graham-campbell/result-type/src/Error.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/graham-campbell/result-type/src/Result.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/graham-campbell/result-type/src/Success.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/graham-campbell/result-type/tests/ResultTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/src/PhpOption/LazyOption.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/src/PhpOption/None.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/src/PhpOption/Option.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/src/PhpOption/Some.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/tests/bootstrap.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/tests/PhpOption/Tests/EnsureTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/tests/PhpOption/Tests/LazyOptionTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/tests/PhpOption/Tests/NoneTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/tests/PhpOption/Tests/OptionTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/phpoption/phpoption/tests/PhpOption/Tests/SomeTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-ctype/bootstrap.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-ctype/bootstrap80.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-ctype/Ctype.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-mbstring/bootstrap.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-mbstring/bootstrap80.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-mbstring/Mbstring.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-mbstring/Resources/unidata/caseFolding.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-mbstring/Resources/unidata/titleCaseRegexp.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-php80/bootstrap.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-php80/Php80.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-php80/PhpToken.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-php80/Resources/stubs/Attribute.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-php80/Resources/stubs/PhpToken.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-php80/Resources/stubs/Stringable.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/symfony/polyfill-php80/Resources/stubs/ValueError.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Dotenv.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Exception/ExceptionInterface.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Exception/InvalidEncodingException.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Exception/InvalidFileException.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Exception/InvalidPathException.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Exception/ValidationException.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Loader/Loader.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Loader/LoaderInterface.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Loader/Resolver.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Parser/Entry.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Parser/EntryParser.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Parser/Lexer.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Parser/Lines.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Parser/Parser.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Parser/ParserInterface.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Parser/Value.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/AdapterInterface.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/ApacheAdapter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/ArrayAdapter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/EnvConstAdapter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/GuardedWriter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/ImmutableWriter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/MultiReader.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/MultiWriter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/PutenvAdapter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/ReaderInterface.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/ReplacingWriter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/ServerConstAdapter.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/Adapter/WriterInterface.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/AdapterRepository.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/RepositoryBuilder.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Repository/RepositoryInterface.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Store/File/Paths.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Store/File/Reader.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Store/FileStore.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Store/StoreBuilder.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Store/StoreInterface.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Store/StringStore.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Util/Regex.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Util/Str.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/src/Validator.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/DotenvTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Loader/LoaderTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Parser/EntryParserTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Parser/LexerTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Parser/LinesTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Parser/ParserTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Repository/Adapter/ArrayAdapterTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Repository/Adapter/EnvConstAdapterTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Repository/Adapter/PutenvAdapterTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Repository/Adapter/ServerConstAdapterTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Repository/RepositoryTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/Store/StoreTest.php</loc>
+</url>
+<url>
+  <loc>https://jacksdamnserver.site/vendor/vlucas/phpdotenv/tests/Dotenv/ValidatorTest.php</loc>
 </url>
 <url>
   <loc>https://jacksdamnserver.site/WebRetro/index.html</loc>

@@ -1,5 +1,4 @@
 <?php
-
 function incrementVisitorCount() {
     $countFile = 'visitor_count.json';
     $cookieName = 'visitor_count_cookie';
@@ -41,7 +40,6 @@ function incrementVisitorCount() {
 // Increment the visitor count and get the updated count
 $visitorCount = incrementVisitorCount();
 
-// Now, you can use $visitorCount in your HTML or wherever you want to display the count
 ?>
 
 <!DOCTYPE html>
@@ -112,4 +110,7 @@ if (!defined('Navbar')) {
     </ul>
   </div>
 </nav>
+<body>
+
+</body>
 
