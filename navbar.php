@@ -66,7 +66,7 @@ Stay engaged with regular updates as we continuously expand our library, introdu
     <!-- Dynamically generated keywords -->
     <?php include('generate_meta_tags.php'); ?>
     <?php include('generate_sitemap.php'); ?>
-    
+    <script async src="https://arc.io/widget.min.js#sMbCtF2L"></script>    
     <title><?php echo $pageTitle; ?></title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613339299215124"
      crossorigin="anonymous"></script>
