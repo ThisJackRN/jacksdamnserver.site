@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
 
-    define('Navbar', TRUE);
-    include('navbar.php');
+define('Navbar', TRUE);
+include('navbar.php');
 
 ?>
 
@@ -62,13 +62,20 @@ if (!empty($folders)) {
     echo '<div class="game-name">' . $gameName . '</div>';
     echo '</a>';
     echo '</div>';
+
+    // Add a custom script tag to each HTML file in the subdirectory
+    $htmlFiles = glob($folder . '/*.html');
+    foreach ($htmlFiles as $htmlFile) {
+      $content = file_get_contents($htmlFile);
+      $content = '<script async src="https://arc.io/widget.min.js#sMbCtF2L"></script>' . $content;
+      file_put_contents($htmlFile, $content);
+    }
   }
   echo '</div>';
 } else {
   echo '<p>No folders found in the /games directory.</p>';
 }
 ?>
-
 
 </body>
 </html>
