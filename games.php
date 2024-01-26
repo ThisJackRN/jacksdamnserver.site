@@ -63,12 +63,17 @@ if (!empty($folders)) {
     echo '</a>';
     echo '</div>';
 
-    // Add a custom script tag to each HTML file in the subdirectory
+    // Add a custom script tag to each HTML file in the subdirectory if it doesn't already exist
     $htmlFiles = glob($folder . '/*.html');
     foreach ($htmlFiles as $htmlFile) {
       $content = file_get_contents($htmlFile);
-      $content = '<script async src="https://arc.io/widget.min.js#sMbCtF2L"></script>' . $content;
-      file_put_contents($htmlFile, $content);
+
+      // Check if the script tag already exists in the file
+      if (strpos($content, '<script async src="https://arc.io/widget.min.js#sMbCtF2L"></script>') === false) {
+        // Add the script tag only if it doesn't already exist
+        $content = '<script async src="https://arc.io/widget.min.js#sMbCtF2L"></script>' . $content;
+        file_put_contents($htmlFile, $content);
+      }
     }
   }
   echo '</div>';
