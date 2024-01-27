@@ -75,8 +75,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_post'])) {
     $header = isset($_POST['hidden_header']) ? $_POST['hidden_header'] : '';
     $body = $_POST['hidden_body'];
 
+    // Set the timezone to Eastern Time (EST)
+    date_default_timezone_set('America/New_York');
+    
     // Format the blog post with time and date
     $postContent = "<h2>$header</h2><div class='blog-post-content'>$body</div><p>Posted on " . date('F j, Y, g:i a') . " By Admin</p>\n";
+
 
     // Append the new post to the file
     file_put_contents('blog_posts.txt', $postContent, FILE_APPEND);
@@ -233,7 +237,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post'])) {
 
     <div class="container">
         <h1>Welcome to the Admin Panel</h1>
-        <p>This has no use. Come back to hack a different day.</p>
+        <p>I hope you are me because if not uh oh...</p>
 
         <div class="styling-bar">
             <label for="fontFamily">Font Family:</label>
