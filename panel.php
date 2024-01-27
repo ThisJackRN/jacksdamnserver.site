@@ -123,6 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_post'])) {
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
             color: #343a40;
+            font-weight: bold;
         }
 
         .container {
