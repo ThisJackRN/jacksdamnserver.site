@@ -7,6 +7,10 @@ function displayAllBlogPosts() {
 
     // Display each blog post with delete button
     $postsArray = explode("\n", $posts);
+
+    // Reverse the order of the posts
+    $postsArray = array_reverse($postsArray);
+
     for ($i = 0; $i < count($postsArray); $i++) {
         $post = $postsArray[$i];
         if (!empty($post)) {
@@ -17,6 +21,7 @@ function displayAllBlogPosts() {
         }
     }
 }
+
 
 ?>
     <style>
