@@ -108,7 +108,7 @@ if (!defined('Navbar')) {
         <a class="nav-link" href="/WebRetro/index.html">Emulator</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://forms.gle/56BgGzpT4jPt7QJa8">Game Submission</a>
+        <a class="nav-link" href="contact.php">Contact/Game Submission</a>
       </li>
     </ul>
   </div>
